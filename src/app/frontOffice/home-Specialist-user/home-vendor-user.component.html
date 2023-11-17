@@ -1,0 +1,87 @@
+<!-- course area start -->
+<div class="body-overlay" id="body-overlay"></div>
+<app-navbar2-user></app-navbar2-user>
+<!-- course area start -->
+<div class="course-area pd-top-100 pd-bottom-90">
+  <div class="container">
+    <div class="section-title text-center">
+      <h6 class="sub-title double-line">SPECIALISTT</h6>
+      <h2 class="title">SPECIALIST PROFILE</h2>
+    </div>
+    <div class="button-container text-left"> <!-- Change text-center to text-left -->
+      <a class="btn btn-base mx-2"  (click)="redirectToManageWorkShop()">Manage Your Workshop</a>
+      <div class="button-container text-left"> <!-- Change text-center to text-left -->
+      <a class="btn btn-base mx-2"  (click)="redirectToprofile(specialist)"  >Manage Your profile</a>
+      
+      <br> <!-- Add a line break between buttons -->
+      <a class="btn btn-base mx-2" (click)="redirectToAddCategorie()">Add mores</a>
+      <br> <!-- Add a line break between buttons -->
+      <a class="btn btn-base mx-2" (click)="redirectToAgenda(specialist)">Consult Agenda</a>
+    </div>
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0">Send Mail <i class="menu-icon tf-icons bx bx-envelope"></i></h5>
+      <small class="text-muted float-end"></small>
+    </div>
+    <div class="card-body">
+      <form (submit)="sendMail()">
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="basic-icon-default-email">To</label>
+          <div class="col-sm-10">
+            <div class="input-group input-group-merge">
+              <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+              <input type="text" id="basic-icon-default-email" class="form-control" placeholder="john.doe@example.com"
+                     aria-label="john.doe" aria-describedby="basic-icon-default-email2"
+                     name="to"
+                     [(ngModel)]="to">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Subject</label>
+          <div class="col-sm-10">
+            <div class="input-group input-group-merge">
+              <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+              <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John Doe"
+                     aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"
+                     name="subject"
+                     [(ngModel)]="subject">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 form-label" for="basic-icon-default-message">Message</label>
+          <div class="col-sm-10">
+            <div class="input-group input-group-merge">
+              <span id="basic-icon-default-message2" class="input-group-text"><i class="bx bx-comment"></i></span>
+              <textarea id="basic-icon-default-message" class="form-control"
+                        placeholder="Hi, Do you have a moment to talk Joe?"
+                        aria-label="Hi, Do you have a moment to talk Joe?"
+                        aria-describedby="basic-icon-default-message2"
+                        name="body"
+                        [(ngModel)]="body"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- course area End -->
+
+<style>
+  .button-container a {
+    margin-bottom: 10px; /* Add margin-bottom for spacing */
+  }
+</style>
+
+
+
+<!-- course area End -->
+<br><br><br><br>
+<br><br><br><br>
+<app-footer-user></app-footer-user>

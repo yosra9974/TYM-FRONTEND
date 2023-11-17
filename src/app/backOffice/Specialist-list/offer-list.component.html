@@ -1,0 +1,48 @@
+<app-navbar2-user></app-navbar2-user>
+
+<div class="course-area pd-top-100 pd-bottom-90">
+  <div class="container text-center">
+    <div class="section-title">
+      <h6 class="sub-title double-line">Assign</h6>
+      <h2 class="title">Choose you Specialist</h2>
+      <button type="submit" class="btn btn-primary w-100" (click)="GoToProfile()">Visit Profile</button>
+
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <span style="margin-right: 30px;">Name</span>
+            <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('lastname,asc')"></span>
+            <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('lastname,desc')"></span>
+          </th>
+          <th>
+            <span style="margin-right: 120px;">Email</span>
+            <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('email,asc')"></span>
+            <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('email,desc')"></span>
+          </th>
+          <th>
+            <span style="margin-right: 120px;">Options</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="table-border-bottom-0">
+        <tr *ngFor="let specialist of specialists | paginate: { itemsPerPage: 10, currentPage: pageNumber }"
+          (dblclick)="onUserClick(specialist.id)">
+          <td class="text-capitalize">{{specialist.firstName}} {{specialist.lastname}}</td>
+          <td>{{specialist.emailSpecialist}}</td>
+          <td><Button>Reserve</Button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--/ Basic Bootstrap Table -->
+
+
+<div class="row justify-content-center">
+  <div class="col-lg-4">
+    <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+  </div>
+</div>
+<app-footer-user></app-footer-user>

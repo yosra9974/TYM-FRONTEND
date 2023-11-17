@@ -1,0 +1,61 @@
+
+<app-navbar-user></app-navbar-user>
+<app-banner-user></app-banner-user>
+
+<section  class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;   bg-gray-300 bg-blend-multiply " >
+    <div class="text-center pb-12">
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+          choose you specialist
+        </h1>
+        <div>
+            <form   class="form-inline my-2 my-lg-0">
+                <input style="margin-top:20px ;"  class="form-control mr-sm-2" type="search" placeholder="Search by Airline" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" >Search </button>
+            </form>
+        </div>
+      </div>
+      <div class="custom-grid">
+        <div class="specialist-card" *ngFor="let specialist of specialists">
+          <div>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+            class="rounded-circle img-fluid" style="width: 150px;">
+          </div>
+          <div class="specialist-details">
+            <p class="specialist-name">{{specialist.firstName}}</p>
+            <p class="specialist-title">{{specialist.title}}</p>
+            <p class="specialist-bio">{{specialist.bio}}</p>
+          </div>
+          <button class="btn btn-primary" (click)="redirectToPortfolio(specialist)">Show More</button>
+        </div>
+      </div>
+</section>
+
+<app-footer-user></app-footer-user>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footer-user></app-footer-user>
+

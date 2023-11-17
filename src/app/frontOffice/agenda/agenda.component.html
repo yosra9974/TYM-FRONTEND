@@ -1,0 +1,4 @@
+<div style="margin-top: 20%;">
+  <full-calendar #fullCalendar [options]="calendarOptions"></full-calendar>
+</div>
+<app-add-offer *ngIf="selectedTimeSlotId !== 0" (bookTimeSlot)="handleBooking($event)" [selectedDate]="selectedDate"></app-add-offer>

@@ -1,0 +1,125 @@
+
+.blog-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .blog-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loading-message,
+  .error-message {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .blog-posts {
+    margin-top: 20px;
+  }
+  
+  .blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .read-more-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Style the Read More button on hover */
+  .read-more-btn:hover {
+    background-color: #0056b3;
+  } 
+
+  .custom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 960px; /* Adjust the max-width to meet your specific requirements */
+    margin: 0 auto;
+  }
+  
+  .specialist-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .specialist-image {
+    width: 100px; /* Adjust the width to your desired size */
+    height: 100px; /* Adjust the height to your desired size */
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .specialist-details {
+    margin-top: 10px;
+  }
+  
+  .specialist-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .specialist-title {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 5px;
+  }
+  
+  .specialist-bio {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

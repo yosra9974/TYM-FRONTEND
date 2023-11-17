@@ -1,0 +1,33 @@
+<form class="signin-inner">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="single-input-inner">
+        <label for="FirstName">First Name:</label>
+        <input type="text" placeholder="FirstName" class="form-control" id="FirstName" name="FirstName" [(ngModel)]="booking.firstname" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="single-input-inner">
+        <label for="de">Last Name</label>
+        <input type="text" placeholder="LastName" class="form-control" id="LastName" name="LastName"
+          [(ngModel)]="booking.lastname" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="single-input-inner">
+        <label for="Online">Online</label>
+        <select class="form-control" id="Online" name="Online" [(ngModel)]="booking.online" required>
+          <option value="Online" selected>Online</option>
+          <option value="Not Online">Not Online</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="single-input-inner">
+        <label for="dm">Booking Date</label>
+        <input type="text" class="form-control" id="dm" name="dm" [(ngModel)]="booking.Book" [value]="selectedDate" readonly>
+      </div>
+    </div>
+    <h1>
+      <button type="submit" class="btn btn-primary w-100" (click)="onSubmit()">Book Now</button>
+    </h1>

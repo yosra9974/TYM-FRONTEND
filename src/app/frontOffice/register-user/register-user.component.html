@@ -1,0 +1,62 @@
+<!-- Search Popup -->
+<div class="td-search-popup" id="td-search-popup">
+  <form action="index.html" class="search-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search.....">
+    </div>
+    <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+  </form>
+</div>
+
+<div class="body-overlay" id="body-overlay"></div>
+
+<!-- Navbar -->
+<app-navbar-user></app-navbar-user>
+
+<!-- Work Area -->
+<div class="work-area pd-top-110">
+  <div class="container">
+    <div class="section-title">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <h6 class="sub-title right-line">What we do</h6>
+          <h2 class="title">How it works?</h2>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <p class="content mt-lg-0">
+            Our platform provides a secure and comfy space to overcome mental health issues with brilliant specialists.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6" style="cursor: pointer;">
+        <div class="single-intro-inner style-icon-bg bg-gray text-center">
+          <div class="thumb">
+            <div class="intro-count">1</div>
+          </div>
+          <div class="details">
+            <h5>As a Specialist</h5>
+            <p>Connect now as a specialist. and send us your cv first</p>
+            <a class="read-more-text" (click)="redirectToUpload()">Join Us <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" style="cursor: pointer;">
+        <div class="single-intro-inner style-icon-bg bg-gray text-center">
+          <div class="thumb">
+            <div class="intro-count">2</div>
+          </div>
+          <div class="details">
+            <h5>As a Client</h5>
+            <p>You can share with a specialist.</p>
+            <a class="read-more-text" (click)="redirectToRegisterClient()">Join Us <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<app-footer-user></app-footer-user>

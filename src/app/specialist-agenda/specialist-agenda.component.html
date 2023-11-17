@@ -1,0 +1,61 @@
+<div class="body-overlay" id="body-overlay"></div>
+<app-navbar2-user></app-navbar2-user>
+<div class="calendar-page">
+  <div class="calendar-section">
+    <h2>Calendar View</h2>
+    <div class="calendar-container agenda-container">
+      <full-calendar #fullCalendar [options]="calendarOptions"></full-calendar>
+    </div>
+  </div>
+
+  <div class="booking-section">
+    <h2>Booking Section</h2>
+    <p>SELECTED DATE</p>
+    <app-booking-form *ngIf="showBookingForm" [startDate]="selectedStartDate" [endDate]="selectedEndDate"
+      (bookTimeSlot)="handleBooking($event)"></app-booking-form>
+  </div>
+  <div class="calendar-list-section">
+    <h2>Calendar List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Event Name</th>
+          <th>Event Type</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of calendarTab">
+          <td>{{ event.dateDebut | date: 'YYYY-MM-DD HH:mm:ss'}}</td>
+          <td>{{ event.dateFin | date: 'YYYY-MM-DD HH:mm:ss'}}</td>
+          <td>{{ event.eventName }}</td>
+          <td>{{ event.eventType }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Booking List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Client Name</th>
+          <th>Client Lastname</th>
+          <th>Online</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of bookings">
+          <td>{{ event.firstname }}</td>
+          <td>{{ event.lastname }}</td>
+          <td>{{ event.online }}</td>
+          <td>{{ event.Book | date: 'YYYY-MM-DD HH:mm:ss' }}</td>
+          <td>
+            <button type="submit" class="btn btn-primary w-100" (click)="approveBooking(event.id)" *ngIf="!event.Approved">Approve</button>
+            <button type="submit" class="btn btn-primary w-100" (click)="declineBooking(event.id)" *ngIf="!event.Approved">Deny</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

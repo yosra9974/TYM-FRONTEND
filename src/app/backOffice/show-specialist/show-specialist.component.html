@@ -1,0 +1,68 @@
+
+<!-- Layout wrapper -->
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+    <app-menu-admin></app-menu-admin>
+    <div class="layout-page">
+      <app-navbar-admin></app-navbar-admin>
+      <div class="content-wrapper">
+        <div class="container-xxl flex-grow-1 container-p-y">
+          <!-- Basic Bootstrap Table -->
+          <div class="card">
+            <h5 class="card-header text-primary fw-bold">TYM Users  <i class="menu-icon tf-icons bx bx-show-alt"></i></h5>
+            <div class="table-responsive text-nowrap">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>
+                    <span style="margin-right: 30px;">Name</span>
+                    <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('lastname,asc')"></span>
+                    <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('lastname,desc')"></span>
+                  </th>
+                  <th>
+                    <span style="margin-right: 30px;">Lastname</span>
+                    <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('lastname,asc')"></span>
+                    <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('lastname,desc')"></span>
+                  </th>
+                  <th>
+                    <span style="margin-right: 30px;">Bio</span>
+                    <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('lastname,asc')"></span>
+                    <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('lastname,desc')"></span>
+                  </th>
+                  <th>
+                    <span style="margin-right: 30px;">title</span>
+                    <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('lastname,asc')"></span>
+                    <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('lastname,desc')"></span>
+                  </th>
+                  <th>
+                    <span style="margin-right: 120px;">Email</span>
+                    <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('email,asc')"></span>
+                    <span class="tf-icons bx bx-down-arrow-alt btn-outline-info"(click)="onSortChange('email,desc')"></span></th>
+                 
+                </thead>
+                <tbody class="table-border-bottom-0">
+                  <tr *ngFor="let specialist of specialists | paginate: { itemsPerPage: 10, currentPage: pageNumber }" (dblclick)="onUserClick(specialist.id)">
+                    <td  class="text-capitalize">{{specialist.firstName}} {{specialist.lastname}}</td>
+                    <td>{{specialist.emailSpecialist}}</td>
+                  
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <!--/ Basic Bootstrap Table -->
+
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <pagination-controls (pageChange)="pageNumber = $event" ></pagination-controls>
+        </div>
+      </div>
+      <app-footer-admin></app-footer-admin>
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+  </div>
+</div>
+
